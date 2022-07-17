@@ -1,0 +1,25 @@
+<html>
+  <title>Sample</title>
+  <body>
+    <div>
+      <h1>My TODOS - by Anji</h1>
+      <ul id="todoslist"></ul>
+    </div>
+    <script>
+      function addTODOs(todos) {
+        const list = document.getElementById('todoslist');
+        todos.forEach((todo) => {
+          list.appendChild(getTODOElement(todo));
+        });
+      }
+      function getTODOElement(todo) {
+        const element = document.createElement('li');
+        element.innerHTML = todo;
+        return element;
+      }
+      fetch('todos').then(res=>res.json()).then((res) => {
+        addTODOs(res);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "success": {
+    "refreshToken": "anjikinnararefreshtoken=",
+    "accessToken": "anjikinnaraaccesstoken",
+    "tokenType": "Bearer"
+  },
+  "error": {
+    "error": "Incorrect Username/Password",
+    "message": "Incorrect Username/Password",
+    "status": 400
+  }
+}
